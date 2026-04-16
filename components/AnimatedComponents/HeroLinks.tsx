@@ -23,7 +23,7 @@ export default function HeroLinks({
           whileTap={{ scale: 0.97 }}
           whileHover={{ y: -2 }}
           className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-wide
-            bg-main-color text-white
+            bg-linear-to-r from-main-color to-secondary-accent text-white shadow-[0_14px_30px_rgba(82,97,185,0.25)]
             px-8 py-4 rounded-full
             transition-colors duration-200
             active:shadow-[0_2px_0_rgba(0,0,0,0.15)] active:translate-y-1">
@@ -41,8 +41,8 @@ export default function HeroLinks({
         <Link
           href="#packages"
           className="flex items-center gap-3 text-sm md:text-base font-bold uppercase tracking-wide
-            bg-white text-main-black
-            border border-main-color/25
+            bg-white/90 text-main-black
+            border border-main-color/15 shadow-[0_10px_30px_rgba(82,97,185,0.12)]
             px-8 py-4 rounded-full
             transition-all duration-200
             active:shadow-[0_2px_0_rgba(0,0,0,0.1)] active:translate-y-1">

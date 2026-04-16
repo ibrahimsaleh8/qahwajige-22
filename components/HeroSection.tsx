@@ -11,9 +11,9 @@ export default function HeroSection({
   images: GalleryImageData[];
 }) {
   return (
-    <section id="home" className="relative bg-main-background py-16 md:py-24">
+    <section id="home" className="relative bg-main-background py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <p className="text-xs md:text-sm font-bold tracking-widest text-main-color mb-4">
+        <p className="text-xs md:text-sm font-bold tracking-widest text-main-color mb-4 bg-white/80 border border-main-color/15 inline-block px-4 py-2 rounded-full">
           ضيافة عربية
         </p>
         <h1 className="font-black leading-tight mb-5 text-4xl sm:text-5xl md:text-6xl text-main-black">
@@ -24,7 +24,7 @@ export default function HeroSection({
             "نقدّم تجربة فاخرة للمناسبات الخاصة والعامة عبر فريق محترف وخدمة دقيقة."}
         </p>
         <HeroLinks whatsApp={whatsApp} />
-        <div className="mt-10">
+        <div className="mt-12 rounded-3xl bg-white/60 border border-main-color/10 shadow-[0_24px_48px_rgba(82,97,185,0.16)] p-3 md:p-5">
           <HeroBackgroundCarousel images={images} />
         </div>
       </div>

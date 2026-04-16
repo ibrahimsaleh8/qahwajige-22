@@ -21,7 +21,7 @@ export default function HeroBackgroundCarousel({
 
   return (
     <div className="relative">
-      <div className="overflow-hidden w-full rounded-2xl border border-main-color/20" ref={emblaRef}>
+      <div className="overflow-hidden w-full rounded-2xl border border-main-color/10 bg-white/70" ref={emblaRef}>
         <div className="flex p-3">
         {images.map((img, i) => (
           <div
@@ -46,7 +46,7 @@ export default function HeroBackgroundCarousel({
           type="button"
           aria-label="الصورة السابقة"
           onClick={() => emblaApi?.scrollPrev()}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-main-color text-white px-5 py-2 text-sm font-bold hover:bg-main-color-dark transition-colors">
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-main-color to-secondary-accent text-white px-5 py-2 text-sm font-bold hover:brightness-105 transition-colors shadow-[0_10px_20px_rgba(82,97,185,0.22)]">
           <ArrowRight className="h-4 w-4" />
           السابق
         </button>
@@ -54,7 +54,7 @@ export default function HeroBackgroundCarousel({
           type="button"
           aria-label="الصورة التالية"
           onClick={() => emblaApi?.scrollNext()}
-          className="inline-flex items-center justify-center gap-2 rounded-full border border-main-color/30 bg-white text-main-color px-5 py-2 text-sm font-bold hover:bg-main-color/10 transition-colors">
+          className="inline-flex items-center justify-center gap-2 rounded-full border border-main-color/20 bg-white text-main-color px-5 py-2 text-sm font-bold hover:bg-main-color/10 transition-colors">
           التالي
           <ArrowLeft className="h-4 w-4" />
         </button>

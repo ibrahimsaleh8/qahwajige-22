@@ -9,6 +9,7 @@ import { FetchProjectData } from "@/lib/FetchProjectData";
 import WideNumbersStatics from "@/components/WideNumbersStatics";
 import RatingSection from "@/components/RatingSection";
 import { CurrentProjectId } from "@/lib/ProjectId";
+import { WhyUsSection } from "@/components/WhyUsSection";
 
 export default async function HomePage() {
   const { data } = await FetchProjectData();
@@ -18,6 +19,7 @@ export default async function HomePage() {
       <WideNumbersStatics />
       <AboutSection {...data.about} />
       <ServicesSection {...data.services} />
+      <WhyUsSection {...data.whyUs} />
       <PremiumPackagesSection
         packages={data.packages ?? []}
         whatsapp={data.hero?.whatsApp ?? ""}

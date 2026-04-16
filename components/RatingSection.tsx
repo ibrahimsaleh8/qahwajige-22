@@ -109,18 +109,18 @@ export default function RatingSection({
   return (
     <section
       id="rating"
-      className="relative py-24 bg-linear-to-b from-main-color/95 to-main-color/80 text-white overflow-hidden">
+      className="relative py-24 bg-second-background text-main-black overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-white/10 backdrop-blur-md border border-white/20 text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-main-color-dark text-white border border-main-color/10 text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
             التقييمات
           </span>
           <h2 className="text-4xl md:text-6xl font-extrabold leading-tight -rotate-1 mb-4">
             قيّم تجربتك
           </h2>
           <div className="w-20 h-2 bg-accent-gold rounded-full mx-auto mb-4 shadow-glow" />
-          <p className="text-white/80 max-w-xl mx-auto text-lg">
+          <p className="text-low-color max-w-xl mx-auto text-lg">
             رأيك يساعدنا على تقديم تجربة ضيافة أفضل دائماً.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function RatingSection({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
-          className="bg-second-bg rounded-3xl shadow-luxury overflow-hidden">
+          className="bg-white rounded-3xl shadow-luxury overflow-hidden border border-main-color/10">
           {/* Stats row */}
           {(averageRating > 0 || totalRatings > 0) && (
             <div className="grid grid-cols-2 divide-x divide-x-reverse divide-main-color/20 border-b border-main-color/20">

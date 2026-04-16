@@ -72,7 +72,7 @@ export default async function ArticlesPage() {
               <Link
                 key={article.id}
                 href={`/${article.title.split(" ").join("-")}`}
-                className="group flex flex-col bg-second-bg rounded-md overflow-hidden
+                className="group flex flex-col bg-white rounded-md overflow-hidden
                   border border-white/20
                   hover:-translate-y-2 
                   transition-all duration-300">
@@ -101,11 +101,11 @@ export default async function ArticlesPage() {
                   {/* Number badge */}
                   <div className="flex items-center gap-3 mb-4">
                     <span
-                      className="w-7 h-7 rounded-full bg-main-color flex items-center justify-center text-white text-xs font-black
+                      className="w-7 h-7 rounded-full bg-main-color-dark flex items-center justify-center text-white text-xs font-black
                       group-hover:bg-accent-gold group-hover:text-main-black transition-colors duration-300">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-xs font-bold uppercase tracking-widest text-low-color">
+                    <span className="text-xs font-bold uppercase tracking-widest text-black">
                       {new Date(article.createdAt).toLocaleDateString("ar-SA", {
                         year: "numeric",
                         month: "short",
@@ -122,7 +122,7 @@ export default async function ArticlesPage() {
                   <div className="w-8 h-1 rounded-full bg-accent-gold mb-4 group-hover:w-14 transition-all duration-300" />
 
                   {article.content && (
-                    <p className="text-sm text-low-color leading-relaxed line-clamp-3 flex-1">
+                    <p className="text-sm text-black leading-relaxed line-clamp-3 flex-1">
                       {article.content.replace(/<[^>]+>/g, "")}
                     </p>
                   )}

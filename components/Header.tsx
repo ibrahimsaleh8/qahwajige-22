@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Coffee, Menu, X } from "lucide-react";
 import { HeaderData } from "@/lib/responseType";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
@@ -28,13 +28,13 @@ export function Header({ brandName, whatsapp }: HeaderProps) {
   return (
     <header
       className={`sticky top-0 left-0 right-0 z-50 transition-all duration-300
-       bg-second-background/95 border-b border-main-color/15 backdrop-blur-sm`}>
+       bg-second-background/90 border-b border-main-color/10 backdrop-blur-xl`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20" dir="rtl">
           {/* Logo */}
           <Link href="/" className="group flex items-center gap-2">
-            <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-main-color text-xs font-black text-white">
-              ق
+            <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-linear-to-r from-main-color to-secondary-accent text-white shadow-md">
+              <Coffee className="h-3.5 w-3.5" strokeWidth={2.3} />
             </span>
             <span
               className="inline-block font-black text-base md:text-2xl leading-none
@@ -46,7 +46,7 @@ export function Header({ brandName, whatsapp }: HeaderProps) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1 rounded-full px-3 py-1.5 bg-white border border-main-color/20">
+          <nav className="hidden lg:flex items-center gap-1 rounded-full px-3 py-1.5 bg-white/95 border border-main-color/10 shadow-[0_10px_30px_rgba(82,97,185,0.12)]">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -77,8 +77,8 @@ export function Header({ brandName, whatsapp }: HeaderProps) {
               target="_blank"
               href={waHref}
               className="flex items-center gap-2 font-black md:text-sm text-xs uppercase tracking-wide
-                bg-main-color text-white md:px-6 md:py-3 px-3 py-3 rounded-full
-                hover:bg-main-color-dark hover:-translate-y-0.5
+                bg-linear-to-r from-main-color to-secondary-accent text-white md:px-6 md:py-3 px-3 py-3 rounded-full
+                hover:brightness-105 hover:-translate-y-0.5 shadow-[0_12px_25px_rgba(82,97,185,0.24)]
                 active:translate-y-0.5 active:shadow-[0_1px_0_rgba(0,0,0,0.15)]
                 transition-all duration-200">
               احجز الآن
@@ -95,7 +95,7 @@ export function Header({ brandName, whatsapp }: HeaderProps) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden mx-4 mb-3 rounded-2xl bg-white border border-main-color/15 overflow-hidden">
+            className="lg:hidden mx-4 mb-3 rounded-2xl bg-white border border-main-color/10 overflow-hidden shadow-[0_16px_40px_rgba(82,97,185,0.18)]">
             <nav className="flex flex-col px-4 py-3" dir="rtl">
               {navLinks.map((link, i) => (
                 <motion.div

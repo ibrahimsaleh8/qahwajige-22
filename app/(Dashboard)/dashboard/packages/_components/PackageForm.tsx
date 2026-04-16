@@ -439,7 +439,6 @@ export default function PackageForm({ projectId, packages }: PackageFormProps) {
                         <div className="flex gap-2 pt-2">
                           <Button
                             size="sm"
-                            variant="outline"
                             disabled={isLoading || isDeleting}
                             onClick={() => setEditingId(pkg.id)}>
                             تعديل

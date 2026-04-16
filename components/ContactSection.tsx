@@ -56,7 +56,7 @@ export default function ContactSection({
     <section id="contact" className="bg-second-background py-20">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <span className="inline-block bg-main-color/10 text-main-color text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-4">
+          <span className="inline-block bg-main-color-dark text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-4 border border-main-color/10 shadow-sm">
             تواصل معنا
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-main-black leading-tight mb-4">
@@ -73,7 +73,7 @@ export default function ContactSection({
             {contactItems.map((item, index) => (
               <div
                 key={index}
-                className="rounded-xl bg-white border border-main-color/15 p-4 shadow-[0_8px_20px_rgba(84,56,37,0.08)]">
+                className="rounded-xl bg-white border border-main-color/10 p-4 shadow-[0_14px_30px_rgba(82,97,185,0.12)]">
                 <div className="flex items-start gap-3">
                   <div className="h-10 w-10 rounded-full bg-main-color/10 text-main-color flex items-center justify-center shrink-0">
                     {item.icon}
@@ -98,7 +98,7 @@ export default function ContactSection({
             ))}
           </div>
 
-          <div className="lg:col-span-3 rounded-2xl overflow-hidden border border-main-color/15 shadow-[0_10px_30px_rgba(84,56,37,0.12)] min-h-80 relative">
+          <div className="lg:col-span-3 rounded-2xl overflow-hidden border border-main-color/10 shadow-[0_20px_40px_rgba(82,97,185,0.16)] min-h-80 relative">
             <iframe
               src={mapEmbedSrc}
               loading="lazy"

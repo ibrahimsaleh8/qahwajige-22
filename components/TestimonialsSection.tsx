@@ -25,7 +25,7 @@ export default function TestimonialsSection() {
     <section id="testimonials" className="py-20 bg-second-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-10">
-          <span className="inline-block bg-main-color/10 text-main-color text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-main-color-dark text-white text-xs font-bold uppercase tracking-wide px-5 py-2 rounded-full mb-5 border border-main-color/10 shadow-sm">
             آراء العملاء
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-main-black leading-tight mb-4">
@@ -40,12 +40,12 @@ export default function TestimonialsSection() {
           {testimonials.map((item, idx) => (
             <div
               key={idx}
-              className="rounded-2xl bg-white border border-main-color/15 p-6 shadow-[0_8px_20px_rgba(84,56,37,0.08)]">
+              className="rounded-2xl bg-white border border-main-color/10 p-6 shadow-[0_14px_30px_rgba(82,97,185,0.12)]">
               <div className="flex items-center gap-1 mb-4 text-accent-gold">
                 {Array.from({ length: 5 }).map((_, starIdx) => (
                   <Star
                     key={starIdx}
-                    className="h-4 w-4 fill-yellow-500 text-accent-gold"
+                    className="h-4 w-4 fill-accent-gold text-accent-gold"
                   />
                 ))}
               </div>

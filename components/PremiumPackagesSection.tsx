@@ -22,7 +22,7 @@ export default function PremiumPackagesSection({
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
-          <span className="inline-block bg-main-color/10 text-main-color text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full mb-5">
+          <span className="inline-block bg-main-color-dark text-white text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full mb-5">
             باقاتنا
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-main-black leading-tight">
@@ -52,10 +52,10 @@ export default function PremiumPackagesSection({
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative rounded-2xl overflow-hidden flex flex-col border
-                 bg-white text-main-black ${isFeatured ? "shadow-[0_16px_36px_rgba(84,56,37,0.18)] border-main-color/35" : "shadow-[0_8px_24px_rgba(84,56,37,0.08)] border-main-color/15"}`}>
+                 bg-white text-main-black ${isFeatured ? "shadow-[0_20px_40px_rgba(82,97,185,0.2)] border-main-color/35" : "shadow-[0_12px_28px_rgba(82,97,185,0.12)] border-main-color/10"}`}>
                 {/* Featured badge */}
                 {isFeatured && (
-                  <div className="absolute top-5 left-5 z-20 bg-main-color text-white text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                  <div className="absolute top-5 left-5 z-20 bg-linear-to-r from-main-color to-secondary-accent text-white text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
                     الأكثر طلباً ⭐
                   </div>
                 )}
@@ -114,7 +114,7 @@ export default function PremiumPackagesSection({
                       transition-all duration-200
                       ${
                         isFeatured
-                          ? "bg-main-color text-white"
+                          ? "bg-linear-to-r from-main-color to-secondary-accent text-white"
                           : "bg-white text-main-color border border-main-color/40 hover:bg-main-color/10"
                       }`}>
                     <FaWhatsapp className="size-5" />
